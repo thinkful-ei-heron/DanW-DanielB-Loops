@@ -12,10 +12,10 @@ let words = 'noggin oreo the moon time tele steed his tent apollo her lives thou
   ' '
 );
 
-let decoded = words.reduce(el => {
-  //console.log(el.slice(-1).toUpperCase);
-  if (el.length === 3) return ' ';
-  else return el.slice(-1);
-});
+let decoded = words.reduce((acc, el) => {
+  console.log(acc);
+  if (el.length === 3) return (acc += ' ');
+  else return (acc += el.slice(-1));
+}, (str = ''));
 
 console.log(decoded);
